@@ -5,6 +5,7 @@ import com.github.coreyshupe.projecteuler.exceptions.InvalidProblemDefinitionExc
 import com.github.coreyshupe.projecteuler.exceptions.UnsupportedProblemException;
 import com.github.coreyshupe.projecteuler.p1to25.Problem1;
 import com.github.coreyshupe.projecteuler.p1to25.Problem10;
+import com.github.coreyshupe.projecteuler.p1to25.Problem11;
 import com.github.coreyshupe.projecteuler.p1to25.Problem2;
 import com.github.coreyshupe.projecteuler.p1to25.Problem3;
 import com.github.coreyshupe.projecteuler.p1to25.Problem4;
@@ -76,6 +77,7 @@ public final class Main {
       registerProblem(Problem8.class, map);
       registerProblem(Problem9.class, map);
       registerProblem(Problem10.class, map);
+      registerProblem(Problem11.class, map);
     } catch (ReflectiveOperationException ex) {
       throw new RuntimeException(ex);
     }
