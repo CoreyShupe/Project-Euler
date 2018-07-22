@@ -32,6 +32,10 @@ When documenting the class it should follow the template:
  *\
 ```
 Any other methods in the class also need to be documented before PR'd.
+<br>
+Also make sure that the problem has been defined in the main class inside of the `registerProblems()` method.
+<br>
+It can be done very simple by using `registerProblem(ProblemX.class, map)` within the method.
 ## Spotless
 This project follows [Spotless](https://github.com/diffplug/spotless) with verification.
 <br>
