@@ -10,6 +10,8 @@ import java.util.ArrayDeque;
 /**
  * To solve this problem, you must find the 13 consecutive numbers which lead to the largest
  * product.
+ * <br>
+ * The number to search through is in (src/main/resources/p8number.txt).
  *
  * @see <a href="https://projecteuler.net/problem=8">Problem 8</a>
  */
