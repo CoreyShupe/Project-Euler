@@ -25,11 +25,11 @@ Also, remember to document linking the Project-Euler problem and giving a brief 
 <br>
 When documenting the class it should follow the template:
 ```java
-\**
+/**
  * To solve this problem, you must find the sum of all numbers below 1000 of the multiples 3 and 5.
  * <br>
  * @see <a href="https://projecteuler.net/problem=1">Problem 1</a>
- *\
+ */
 ```
 Any other methods in the class also need to be documented before PR'd.
 <br>
