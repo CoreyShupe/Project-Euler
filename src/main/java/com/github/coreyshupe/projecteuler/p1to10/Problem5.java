@@ -14,8 +14,8 @@ public class Problem5 implements Problem<Integer> {
   @Override
   public Integer getSolution() {
     initial:
-    for (int x = 20 * 20; ; x += 20) {
-      for (int z = 3; z < 19; z++) {
+    for (int x = 20; ; x += 20) {
+      for (int z = 3; z < 20; z++) {
         if (x % z != 0) {
           continue initial;
         }
