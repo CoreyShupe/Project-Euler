@@ -3,6 +3,11 @@ package com.github.coreyshupe.projecteuler;
 import com.github.coreyshupe.projecteuler.exceptions.InvalidProjectClassException;
 import com.github.coreyshupe.projecteuler.exceptions.InvalidProjectDefinitionException;
 import com.github.coreyshupe.projecteuler.exceptions.UnsupportedProjectException;
+import com.github.coreyshupe.projecteuler.p1to10.Problem1;
+import com.github.coreyshupe.projecteuler.p1to10.Problem2;
+import com.github.coreyshupe.projecteuler.p1to10.Problem3;
+import com.github.coreyshupe.projecteuler.p1to10.Problem4;
+import com.github.coreyshupe.projecteuler.p1to10.Problem5;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -37,7 +42,15 @@ public final class Main {
 
   private static Map<Integer, Problem> registerProblems() {
     var map = new TreeMap<Integer, Problem>(Integer::compareTo);
-
+    try {
+      registerProblem(Problem1.class, map);
+      registerProblem(Problem2.class, map);
+      registerProblem(Problem3.class, map);
+      registerProblem(Problem4.class, map);
+      registerProblem(Problem5.class, map);
+    } catch (ReflectiveOperationException ex) {
+      throw new RuntimeException(ex);
+    }
     return map;
   }
 
