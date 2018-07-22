@@ -1,8 +1,8 @@
 package com.github.coreyshupe.projecteuler;
 
-import com.github.coreyshupe.projecteuler.exceptions.InvalidProjectClassException;
-import com.github.coreyshupe.projecteuler.exceptions.InvalidProjectDefinitionException;
-import com.github.coreyshupe.projecteuler.exceptions.UnsupportedProjectException;
+import com.github.coreyshupe.projecteuler.exceptions.InvalidProblemClassException;
+import com.github.coreyshupe.projecteuler.exceptions.InvalidProblemDefinitionException;
+import com.github.coreyshupe.projecteuler.exceptions.UnsupportedProblemException;
 import com.github.coreyshupe.projecteuler.p1to10.Problem1;
 import com.github.coreyshupe.projecteuler.p1to10.Problem2;
 import com.github.coreyshupe.projecteuler.p1to10.Problem3;
@@ -24,11 +24,11 @@ public final class Main {
         if (problems.containsKey(projectNumber)) {
           printProblem(projectNumber, problems.get(projectNumber));
         } else {
-          throw new UnsupportedProjectException(
+          throw new UnsupportedProblemException(
               "This problem has not yet been supported. If you'd like to add it see: ");
         }
       } else {
-        throw new InvalidProjectDefinitionException(
+        throw new InvalidProblemDefinitionException(
             "Failed to understand the project # `" + rawProjectNumber + "`");
       }
     }
@@ -58,7 +58,7 @@ public final class Main {
       Class<I> problemClazz, Map<Integer, Problem<?>> map) throws ReflectiveOperationException {
     var annotations = problemClazz.getAnnotationsByType(ProjectEulerProblem.class);
     if (annotations.length == 0) {
-      throw new InvalidProjectClassException(
+      throw new InvalidProblemClassException(
           "The class `" + problemClazz.getName() + "` has not been annotated properly. ");
     }
     var annotation = annotations[0];

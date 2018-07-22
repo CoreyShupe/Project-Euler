@@ -1,6 +1,6 @@
 package com.github.coreyshupe.projecteuler;
 
-import com.github.coreyshupe.projecteuler.exceptions.InvalidProjectClassException;
+import com.github.coreyshupe.projecteuler.exceptions.InvalidProblemClassException;
 import java.util.HashMap;
 import java.util.Map;
 import org.assertj.core.api.Assertions;
@@ -29,7 +29,7 @@ public class TestRegistration {
   @Test
   public void applyRegistration_whenAnnotationNotPresent_shouldThrowError() {
     Assertions.assertThatThrownBy(() -> Main.registerProblem(InvalidProblem.class, problemMap))
-        .isInstanceOf(InvalidProjectClassException.class);
+        .isInstanceOf(InvalidProblemClassException.class);
   }
 
   @Test
