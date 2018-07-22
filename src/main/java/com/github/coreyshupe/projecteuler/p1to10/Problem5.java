@@ -6,7 +6,7 @@ import com.github.coreyshupe.projecteuler.ProjectEulerProblem;
 /**
  * To solve this problem, you must find the smallest positive which 1-20 divides into cleanly.
  *
- * <p><a href="https://projecteuler.net/problem=5">Problem 5</a>
+ * @see <a href="https://projecteuler.net/problem=5">Problem 5</a>
  */
 @ProjectEulerProblem(5)
 public class Problem5 implements Problem<Integer> {

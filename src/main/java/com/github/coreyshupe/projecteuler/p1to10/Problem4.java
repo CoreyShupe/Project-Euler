@@ -7,7 +7,7 @@ import com.github.coreyshupe.projecteuler.ProjectEulerProblem;
  * To solve this problem, you must find the largest palindrome from the product of two three digit
  * numbers.
  *
- * <p><a href="https://projecteuler.net/problem=4">Problem 4</a>
+ * @see <a href="https://projecteuler.net/problem=4">Problem 4</a>
  */
 @ProjectEulerProblem(4)
 public class Problem4 implements Problem<Integer> {
