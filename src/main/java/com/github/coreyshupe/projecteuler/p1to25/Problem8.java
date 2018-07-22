@@ -5,7 +5,8 @@ import com.github.coreyshupe.projecteuler.ProjectEulerProblem;
 import java.util.ArrayDeque;
 
 /**
- * To solve this problem, you must find the 13 consecutive numbers which lead to the largest product.
+ * To solve this problem, you must find the 13 consecutive numbers which lead to the largest
+ * product.
  *
  * @see <a href="https://projecteuler.net/problem=8">Problem 8</a>
  */

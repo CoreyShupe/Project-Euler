@@ -12,14 +12,14 @@ import com.github.coreyshupe.projecteuler.ProjectEulerProblem;
 @ProjectEulerProblem(10)
 public class Problem10 implements Problem<Long> {
 
-    @Override
-    public Long getSolution() {
-        long sum = 5;
-        for(int i = 5; i < 2_000_000; i+=2) {
-            if(MathUtils.isPrime(i)) {
-                sum += i;
-            }
-        }
-        return sum;
+  @Override
+  public Long getSolution() {
+    long sum = 5;
+    for (int i = 5; i < 2_000_000; i += 2) {
+      if (MathUtils.isPrime(i)) {
+        sum += i;
+      }
     }
+    return sum;
+  }
 }

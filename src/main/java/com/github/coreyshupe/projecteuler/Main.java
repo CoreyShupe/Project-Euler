@@ -4,10 +4,16 @@ import com.github.coreyshupe.projecteuler.exceptions.InvalidProblemClassExceptio
 import com.github.coreyshupe.projecteuler.exceptions.InvalidProblemDefinitionException;
 import com.github.coreyshupe.projecteuler.exceptions.UnsupportedProblemException;
 import com.github.coreyshupe.projecteuler.p1to25.Problem1;
+import com.github.coreyshupe.projecteuler.p1to25.Problem10;
 import com.github.coreyshupe.projecteuler.p1to25.Problem2;
 import com.github.coreyshupe.projecteuler.p1to25.Problem3;
 import com.github.coreyshupe.projecteuler.p1to25.Problem4;
 import com.github.coreyshupe.projecteuler.p1to25.Problem5;
+import com.github.coreyshupe.projecteuler.p1to25.Problem6;
+import com.github.coreyshupe.projecteuler.p1to25.Problem7;
+import com.github.coreyshupe.projecteuler.p1to25.Problem8;
+import com.github.coreyshupe.projecteuler.p1to25.Problem9;
+
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -66,6 +72,11 @@ public final class Main {
       registerProblem(Problem3.class, map);
       registerProblem(Problem4.class, map);
       registerProblem(Problem5.class, map);
+      registerProblem(Problem6.class, map);
+      registerProblem(Problem7.class, map);
+      registerProblem(Problem8.class, map);
+      registerProblem(Problem9.class, map);
+      registerProblem(Problem10.class, map);
     } catch (ReflectiveOperationException ex) {
       throw new RuntimeException(ex);
     }
