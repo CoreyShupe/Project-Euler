@@ -1,4 +1,4 @@
-package com.github.coreyshupe.projecteuler.p1to10;
+package com.github.coreyshupe.projecteuler.p1to25;
 
 import com.github.coreyshupe.projecteuler.Problem;
 import com.github.coreyshupe.projecteuler.ProjectEulerProblem;

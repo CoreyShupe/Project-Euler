@@ -3,11 +3,11 @@ package com.github.coreyshupe.projecteuler;
 import com.github.coreyshupe.projecteuler.exceptions.InvalidProblemClassException;
 import com.github.coreyshupe.projecteuler.exceptions.InvalidProblemDefinitionException;
 import com.github.coreyshupe.projecteuler.exceptions.UnsupportedProblemException;
-import com.github.coreyshupe.projecteuler.p1to10.Problem1;
-import com.github.coreyshupe.projecteuler.p1to10.Problem2;
-import com.github.coreyshupe.projecteuler.p1to10.Problem3;
-import com.github.coreyshupe.projecteuler.p1to10.Problem4;
-import com.github.coreyshupe.projecteuler.p1to10.Problem5;
+import com.github.coreyshupe.projecteuler.p1to25.Problem1;
+import com.github.coreyshupe.projecteuler.p1to25.Problem2;
+import com.github.coreyshupe.projecteuler.p1to25.Problem3;
+import com.github.coreyshupe.projecteuler.p1to25.Problem4;
+import com.github.coreyshupe.projecteuler.p1to25.Problem5;
 import java.util.Map;
 import java.util.TreeMap;
 
