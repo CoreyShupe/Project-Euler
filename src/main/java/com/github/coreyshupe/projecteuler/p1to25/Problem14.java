@@ -19,7 +19,6 @@ public class Problem14 implements Problem<Integer> {
     for (int i = 3; i < 1_000_000; i++) {
       if (!isPowerOfTwo(i)) {
         int count = generateCollatzSequenceNumberCount(i);
-        System.out.println("Testing " + i + " | " + count);
         if (count > longest) {
           number = i;
           longest = count;
