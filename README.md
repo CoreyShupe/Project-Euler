@@ -1,4 +1,4 @@
-# Project-Euler
+# Project-Euler ![Invalid Travis](https://travis-ci.org/CoreyShupe/Project-Euler.svg?branch=master)
 Project Euler [(Archive)](https://projecteuler.net/archives) solutions.
 <br>
 This project was made using java 10 and uses the `var` keyword within it.
