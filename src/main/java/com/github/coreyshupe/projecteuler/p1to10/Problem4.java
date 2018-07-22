@@ -15,11 +15,19 @@ public class Problem4 implements Problem<Integer> {
   @Override
   public Integer getSolution() {
     int latest = 0;
+    int productX = 0;
+    int productY = 0;
+    outer:
     for (int x = 999; x > 100; x--) {
-      for (int z = 999; z > 100; z--) {
+      for (int z = x; z > 100; z--) {
         int product = x * z;
+        if (x < productX && x < productY && z < productX && z < productY) {
+          break outer;
+        }
         if (product > latest && isPalindrome(Integer.toString(product))) {
           latest = product;
+          productX = x;
+          productY = z;
         }
       }
     }
@@ -35,8 +43,7 @@ public class Problem4 implements Problem<Integer> {
    * @return True if the initial input is a palindrome.
    */
   private boolean isPalindrome(String initial) {
-    StringBuilder builder = new StringBuilder(initial);
-    builder.reverse();
-    return builder.toString().equals(initial);
+    var builder = new StringBuilder(initial);
+    return builder.reverse().toString().equals(initial);
   }
 }
