@@ -27,7 +27,7 @@ public final class MathUtils {
         if(n % 2 == 0) {
             return false;
         }
-        for (long i = 3; i * i < n; i += 2) {
+        for (long i = 2; i * i <= n; i++) {
             if (n % i == 0) {
                 return false;
             }
