@@ -1,5 +1,6 @@
 package com.github.coreyshupe.projecteuler.p1to25;
 
+import com.github.coreyshupe.projecteuler.MathUtils;
 import com.github.coreyshupe.projecteuler.Problem;
 import com.github.coreyshupe.projecteuler.ProjectEulerProblem;
 import java.io.BufferedReader;
@@ -9,8 +10,7 @@ import java.util.ArrayDeque;
 
 /**
  * To solve this problem, you must find the 13 consecutive numbers which lead to the largest
- * product.
- * <br>
+ * product. <br>
  * The number to search through is in (src/main/resources/p8number.txt).
  *
  * @see <a href="https://projecteuler.net/problem=8">Problem 8</a>
@@ -39,14 +39,14 @@ public class Problem8 implements Problem<Long> {
     long currentProduct;
     var queue = new ArrayDeque<Integer>();
     for (int i = 0; i < CONSECUTIVE_NUMBS; i++) {
-      int digit = getDigit(chars[i]);
+      int digit = MathUtils.getDigit(chars[i]);
       largestProduct *= digit;
       queue.offerLast(digit);
     }
     currentProduct = largestProduct;
     outer:
     for (int i = CONSECUTIVE_NUMBS; i < chars.length; i++) {
-      int digit = getDigit(chars[i]);
+      int digit = MathUtils.getDigit(chars[i]);
       if (digit == 0) {
         queue.clear();
         currentProduct = 1;
@@ -55,7 +55,7 @@ public class Problem8 implements Problem<Long> {
           if (i == chars.length) {
             break outer;
           }
-          digit = getDigit(chars[i]);
+          digit = MathUtils.getDigit(chars[i]);
           if (digit == 0) {
             queue.clear();
             currentProduct = 1;
@@ -82,15 +82,5 @@ public class Problem8 implements Problem<Long> {
       }
     }
     return largestProduct;
-  }
-
-  /**
-   * Turns the {@code char} into a base10 {@code int}.
-   *
-   * @param c The {@code char} to turn into the {@code int}.
-   * @return The {@code int} form of {@code c}.
-   */
-  private int getDigit(char c) {
-    return Character.digit(c, 10);
   }
 }

@@ -32,5 +32,15 @@ public final class MathUtils {
     return true;
   }
 
+  /**
+   * Turns the {@code char} into a base10 {@code int}.
+   *
+   * @param c The {@code char} to turn into the {@code int}.
+   * @return The {@code int} form of {@code c}.
+   */
+  public static int getDigit(char c) {
+    return Character.digit(c, 10);
+  }
+
   private MathUtils() {}
 }

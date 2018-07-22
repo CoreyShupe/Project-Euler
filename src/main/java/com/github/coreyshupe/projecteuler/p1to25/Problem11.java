@@ -9,8 +9,7 @@ import java.util.function.Function;
 
 /**
  * To solve this problem, you must find the 4 adjacent numbers in the same direction within the grid
- * making the largest product.
- * <br>
+ * making the largest product. <br>
  * The grid is given in (src/main/resources/p11grid.txt).
  *
  * @see <a href="https://projecteuler.net/problem=11">Problem 11</a>
