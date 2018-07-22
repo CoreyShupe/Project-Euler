@@ -34,7 +34,7 @@ public final class Main {
     }
   }
 
-  private static void printProblem(int projectNumber, Problem<?> problem) {
+  public static void printProblem(int projectNumber, Problem<?> problem) {
     System.out.println("Project Number " + projectNumber);
     System.out.println("\tAnswer: " + problem.getSolution());
     System.out.println("\tSolution: in `" + problem.getClass().getName() + "`.");
@@ -54,7 +54,7 @@ public final class Main {
     return map;
   }
 
-  private static <I extends Problem> void registerProblem(
+  public static <I extends Problem> void registerProblem(
       Class<I> problemClazz, Map<Integer, Problem> map) throws ReflectiveOperationException {
     var annotations = problemClazz.getAnnotationsByType(ProjectEulerProblem.class);
     if (annotations.length == 0) {
