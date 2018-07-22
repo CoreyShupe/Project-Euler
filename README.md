@@ -1,4 +1,5 @@
-# Project-Euler ![Invalid Travis](https://travis-ci.org/CoreyShupe/Project-Euler.svg?branch=master)
+# Project-Euler [![Invalid Travis](https://travis-ci.org/CoreyShupe/Project-Euler.svg?branch=master)](https://travis-ci.org/CoreyShupe/Project-Euler) [![LICENSE](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](LICENSE)
+
 Project Euler [(Archive)](https://projecteuler.net/archives) solutions.
 <br>
 This project was made using java 10 and uses the `var` keyword within it.
