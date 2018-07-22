@@ -40,8 +40,8 @@ public final class Main {
     System.out.println("\tSolution: in `" + problem.getClass().getName() + "`.");
   }
 
-  private static Map<Integer, Problem> registerProblems() {
-    var map = new TreeMap<Integer, Problem>(Integer::compareTo);
+  private static Map<Integer, Problem<?>> registerProblems() {
+    var map = new TreeMap<Integer, Problem<?>>(Integer::compareTo);
     try {
       registerProblem(Problem1.class, map);
       registerProblem(Problem2.class, map);
@@ -54,15 +54,15 @@ public final class Main {
     return map;
   }
 
-  public static <I extends Problem> void registerProblem(
-      Class<I> problemClazz, Map<Integer, Problem> map) throws ReflectiveOperationException {
+  public static <I extends Problem<?>> void registerProblem(
+      Class<I> problemClazz, Map<Integer, Problem<?>> map) throws ReflectiveOperationException {
     var annotations = problemClazz.getAnnotationsByType(ProjectEulerProblem.class);
     if (annotations.length == 0) {
       throw new InvalidProjectClassException(
           "The class `" + problemClazz.getName() + "` has not been annotated properly. ");
     }
     var annotation = annotations[0];
-    map.put(annotation.value(), (Problem) problemClazz.getConstructors()[0].newInstance());
+    map.put(annotation.value(), problemClazz.getConstructor().newInstance());
   }
 
   private Main() {}
