@@ -11,8 +11,14 @@ import com.github.coreyshupe.projecteuler.p1to10.Problem5;
 import java.util.Map;
 import java.util.TreeMap;
 
+/** The main entry {@code class} for the program. */
 public final class Main {
 
+  /**
+   * The main entry point for the program.
+   *
+   * @param args The execution parameters.
+   */
   public static void main(String[] args) {
     var problems = registerProblems();
     if (args.length == 0) {
@@ -34,12 +40,24 @@ public final class Main {
     }
   }
 
-  public static void printProblem(int projectNumber, Problem<?> problem) {
-    System.out.println("Project Number " + projectNumber);
+  /**
+   * Prints out the details for a specified {@link Problem}. <br>
+   * Includes the problem number along with the answer and solution {@code class} location.
+   *
+   * @param problemNumber The number of the problem.
+   * @param problem The {@link Problem}.
+   */
+  public static void printProblem(int problemNumber, Problem<?> problem) {
+    System.out.println("Project Number " + problemNumber);
     System.out.println("\tAnswer: " + problem.getSolution());
     System.out.println("\tSolution: in `" + problem.getClass().getName() + "`.");
   }
 
+  /**
+   * Retrieves all defined problems in the project.
+   *
+   * @return The {@link Map} containing the problem numbers matched with their {@link Problem}.
+   */
   private static Map<Integer, Problem<?>> registerProblems() {
     var map = new TreeMap<Integer, Problem<?>>(Integer::compareTo);
     try {
@@ -54,6 +72,14 @@ public final class Main {
     return map;
   }
 
+  /**
+   * Registers a problem to a class.
+   *
+   * @param problemClazz The {@link I}'s {@link Class} for building.
+   * @param map The {@link Map} which the problem should be added to.
+   * @param <I> The type class of problem.
+   * @throws ReflectiveOperationException When the {@link Class} is not accessible.
+   */
   public static <I extends Problem<?>> void registerProblem(
       Class<I> problemClazz, Map<Integer, Problem<?>> map) throws ReflectiveOperationException {
     var annotations = problemClazz.getAnnotationsByType(ProjectEulerProblem.class);
